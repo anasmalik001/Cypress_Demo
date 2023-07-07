@@ -1,0 +1,26 @@
+{
+  "name": "demo-project",
+  "version": "1.0.0",
+  "description": "This is demo project",
+  "main": "index.js",
+  "scripts": {
+    "start": "cypress open",
+    "cy:run": "cypress run --env allure=true",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "test": "npm run cy:run || npm run posttest && npm run launchReport",
+    "posttest": "npm run allure:report",
+    "launchReport": "allure serve"
+  },
+  "keywords": [],
+  "author": "Anas Malik",
+  "license": "ISC",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.28.0",
+    "cypress": "^12.9.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.0.0",
+    "cypress-xpath": "^1.6.2",
+    "mocha": "^9.2.2",
+    "mochawesome": "^7.1.2"
+  }
+}
