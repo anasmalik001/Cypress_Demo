@@ -10,7 +10,7 @@ describe('My First Test Suits', () => {
         cy.get('#checkBoxOption1').check().should('be.checked').and('have.value', 'option1')
         cy.get('#checkBoxOption1').uncheck().should('not.be.checked')
         cy.wait(2000)
-        cy.get('input[type="checkbox"]').check(['option1', 'option2', 'option3'])
+        cy.get('input[type="checkbox"]').check(['option1', 'option2', 'option3']);
 
         //Handle Static Dropdown
 
