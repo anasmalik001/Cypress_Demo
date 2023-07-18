@@ -14,7 +14,7 @@ describe('My First Test Suits', () => {
 
         //Handle Static Dropdown
 
-        cy.get('select').select('option3').should('have.value', 'option3')
+        cy.get('select').select('option3').should('have.value', 'option3');
 
         //Handle Dynamic Dropdown
 
